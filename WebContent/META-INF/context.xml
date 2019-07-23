@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="jdbc/xe"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@localhost:1521:xe"
+		username="hr"
+		password="a1234"
+		maxActive="200"
+		maxIdle="100"/>
+</Context>
+
+<!-- maxActive: 커넥션 풀이 제공하는 최대 커넥션 수 
+	동시접속자 수에 따라서 지정
+	maxIdle:-사용되지 않고 풀에 저장할수 있는 최대 커넥션수
+	- 기분적으로 maxIdle은 maxActive의
+	 절반정도로 지정하면됨. 
+-->
